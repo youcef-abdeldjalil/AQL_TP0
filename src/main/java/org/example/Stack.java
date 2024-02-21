@@ -35,4 +35,20 @@ public class Stack {private int[] array;
         System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
     }
+
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i <= top; i++) {
+            sb.append(array[i]);
+            if (i < top) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
